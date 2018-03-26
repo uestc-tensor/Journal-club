@@ -1,0 +1,6 @@
+This paper is similar to a review article. It introduces the background of tensor network(TN), fully presents mathematical operations of tensor, proposes graphical representation for fundamental TNs, and discusses various kinds of decomposition methods and their solutions.
+Main discussion:
+1.	The main advantages of TNs is to eliminate the curse of dimensionality, reduce computing complexity and memory cost.
+2.	In section 2 and 3, author uses graphical representation to introduce the mathematical operations and models of TNs, it is very intuitive for readers to understand.
+3.	In order to reduce the memory cost and computing complexity, author represents some ideas: distributed TNs, divide-conquer approach, strategy to divide the tensor into slices, sampling.
+4.	Algorithm: this paper proposes many algorithm(HOSVD,HOOI,etc.), we discussed in detail. 

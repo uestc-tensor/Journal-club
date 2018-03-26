@@ -1,0 +1,46 @@
+\documentclass[UTF8]{article}
+
+\usepackage{geometry}
+
+\special{papersize=2in,2in}%纸张大小为8.5inch×11inch
+
+\usepackage{amsmath,amssymb}  % 数学字符与公式宏包，分数多用\dfrac方能显示我认可的大小
+\usepackage{calc}
+\usepackage{units} %单位宏包
+\usepackage{graphicx}   % 插图必用宏包
+\usepackage{enumerate}
+
+
+
+% opening
+
+\begin{document}
+
+
+	\title{Journal club report}	
+	\date{Nov 3, 2017} 
+	\maketitle
+	The main idea of these paper:
+	
+	MPS(matrix product state) algorithm: applying MPS on training set to obtain the common  factors $\mathcal{B}_{i_1}^{(1)},\cdots,\mathcal{B}_{i_{n-1}}^{(n-1)}  ,\mathcal{C}_{i_n}^{(n)},\cdots,\mathcal{C}_{i_N}^{(N)}$  and core matrix $\mathcal{G}_k^{(n)}$,then use the common factors the obtain the core matrix of the test set.
+	
+	For the Tmac+TT, due to the blocking-artifacts, introducing an operation called image concatenation.
+	
+	Main discussion:
+	
+	MPS (matrix product state) algorithm:  
+	\begin{enumerate}[1)]
+	\item the mode of MPS and the mode of tensor train is similar; 
+	\item using the feature matrix obtained through this algorithm to classification, the result is very good. Because the common factors are very detailed.
+     \end{enumerate}
+ 
+	Classification: we discuss the classification process, the conclusion is that this paper just uses simple classification algorithm. It does’t have a feedback to update the common factors or improve the quality.
+	
+	image concatenation operation: we think this operation is analogous to the shift operation we used in block multi-low rank decomposition to reduce the blocking-artifacts. The theory of this operation is unknown.
+	
+	The possible work: 1) KA+MPS; 2) the application for MPS.
+
+ 
+    		
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[UTF8]{article}
+
+\usepackage{geometry}
+
+\special{papersize=2in,2in}%纸张大小为8.5inch×11inch
+
+\usepackage{amsmath,amssymb}  % 数学字符与公式宏包，分数多用\dfrac方能显示我认可的大小
+\usepackage{calc}
+\usepackage{units} %单位宏包
+\usepackage{graphicx}   % 插图必用宏包
+\usepackage{enumerate}
+
+
+
+% opening
+
+\begin{document}
+
+
+	\title{Journal club report}	
+	\date{Oct 20, 2017} 
+	\maketitle
+The main contribution of this paper is:
+\begin{enumerate}
+	\item introduce tensor train decomposition and apply tensor rank to solve tensor completion.
+	\item Introduce two algorithm based on TT rank.
+	\item Introduce a new technique called KA to extend tensor dimension.
+\end{enumerate}
+
+Main discussion:
+\begin{enumerate}
+	\item  tensor train decomposition
+	\begin{equation}
+	\mathcal{A}_{[k]}=\text{reshape} (\mathcal{A}, \prod_{s=1}^k n_s,\prod_{s=k+1}^d n_s)
+	\end{equation}
+	The difference between tucker decomposition and tensor train decomposition is that tucker decomposition is just mode-$k$ matricization but tensor train decomposition is mode-$(1,2,…,k)$  matricization.
+	\item how to prove the tensor train decomposition is balanced?
+	In this paper, via von neuman entropy, we obtain that 
+	\begin{equation}
+	S=\text{log}_2 r_k
+	\end{equation}
+	Because the bigger the $S$, the stronger the correlation between subsystem $A$ and $B$.  $S$ is bounded by $r_k$ , $r_k$ is bounded by  $m=I_k$.
+	It just prove that tucker decomposition is unbalanced. And  $r_k$ should be as large as possible. So tensor train decomposition can be a solution.
+	\item Algorithm
+	The two algorithms in this paper is easy to understand, the main difference is the step unfold the tensor $\mathcal{A}$  to get ${\bf{A}}_k$  (TT decomposition).
+	TMac-TT is a good algorithm due to its multilinear matrix factorization model. 
+	\item KA 
+	Ket augmentation(KA) is a technique to represent a lower-order tensor by a high-order one. The expansion method here is hard to imagine how the elements in the new tensor are arranged.
+	\item Balance
+	Compared with tucker decomposition, the tensor train decompositin is more banlanced. 
+	Due to
+		\begin{equation}
+	\mathcal{A}_{[k]}=\text{reshape} (\mathcal{A}, \prod_{s=1}^k n_s,\prod_{s=k+1}^d n_s)
+	\end{equation}
+	,
+	to some extent,  $k$ is closer to $d/2$ ,  ${\bf{A}}_k$  is more balanced. 
+	\item the possible future work\\
+	  1.due to the balance problem, we think that block+multilinear low-rank which we didn’t finished last time is likely to succeed.\\
+	  2.TMac algorithm in this paper perform better than others, maybe we can use other matrix factorization method to have a try. Or use it to other application.
+\end{enumerate}
+
+
+\end{document}

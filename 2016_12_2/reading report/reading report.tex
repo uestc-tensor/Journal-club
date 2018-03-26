@@ -1,0 +1,36 @@
+\documentclass[UTF8]{article}
+
+\usepackage{geometry}
+
+\special{papersize=2in,2in}%纸张大小为8.5inch×11inch
+
+\usepackage{amsmath,amssymb}  % 数学字符与公式宏包，分数多用\dfrac方能显示我认可的大小
+\usepackage{calc}
+\usepackage{units} %单位宏包
+\usepackage{graphicx}   % 插图必用宏包
+\usepackage{enumerate}
+
+
+
+% opening
+
+\begin{document}
+
+
+	\title{Journal club report}	
+	\date{Dec 2, 2017} 
+	\maketitle
+	The main idea of this paper:
+	This paper propose a tensor completion algorithm which use matrix state representation of tensor train decomposition. 
+	Main discussion:
+	  
+	\begin{enumerate}[1)]
+		\item How to choose TT-rank in algorithm. This paper set the TT-rank randomly.
+		\item algorithm : algorithm 1 is used as an initialization for $U_i$ for the tensor completion problem, then use algorithm 2 to optimize $U_i$ to get the original image $X$.
+		\item $P_Ω$ is independent standard normal distribution.
+		\item Tensor tree decomposition report by Longzhen .
+		\item The possible work:  KA+TT-tree;
+		\item Problem: seek a possible way to set the TT-rank.
+     \end{enumerate}
+
+\end{document}

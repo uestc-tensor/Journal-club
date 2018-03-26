@@ -1,0 +1,46 @@
+\documentclass[UTF8]{article}
+
+\usepackage{geometry}
+
+\special{papersize=2in,2in}%纸张大小为8.5inch×11inch
+
+\usepackage{amsmath,amssymb}  % 数学字符与公式宏包，分数多用\dfrac方能显示我认可的大小
+\usepackage{calc}
+\usepackage{units} %单位宏包
+\usepackage{graphicx}   % 插图必用宏包
+\usepackage{enumerate}
+
+
+
+% opening
+
+\begin{document}
+
+
+	\title{Journal club report}	
+	\date{Aug 17, 2017} 
+	\maketitle
+	This week we read the paper “generalized low rank models”.
+	
+	Main idea:
+	
+	This paper introduced some models based on PCA, and their solutions. Through this paper, we can get the method to change models through using different loss function to estimate error, in terms of data analysis, this paper extended the basic models based numerical data to generalization models on all data types.
+	
+	Main discussion:
+
+	
+	  
+	\begin{enumerate}[1)]
+		\item Proof the solution of the Quadratically regularized PCA.
+		\begin{equation}
+		\min \lVert A-XY \lVert_F^2+\gamma\lVert X\lVert_F^2+\gamma\lVert Y\lVert_F^2
+		\end{equation}
+		We mainly discuss two methods: one is based singular value decomposition, one is alternating minimization. 
+		Note that this problem is convex over X and Y respectively with the other fixed.
+		\item Dictionary learning
+		\item Fitting low rank models
+		Main methods:
+		alternating gradient, proximal gradient, or stochastic gradient algorithms
+     \end{enumerate}
+
+\end{document}

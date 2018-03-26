@@ -1,0 +1,39 @@
+\documentclass[UTF8]{article}
+
+\usepackage{geometry}
+
+\special{papersize=2in,2in}%纸张大小为8.5inch×11inch
+
+\usepackage{amsmath,amssymb}  % 数学字符与公式宏包，分数多用\dfrac方能显示我认可的大小
+\usepackage{calc}
+\usepackage{units} %单位宏包
+\usepackage{graphicx}   % 插图必用宏包
+\usepackage{enumerate}
+
+
+
+% opening
+
+\begin{document}
+
+
+	\title{Journal club report}	
+	\date{March 17, 2017} 
+	\maketitle
+    	We discussed “tensor ring decomposition” at Mar.17\\
+    	The main idea of this paper:
+    	
+    	According to previous paper, the model of tensor ring decomposition is proposed. The main contributes of this paper is further introducing the model, giving mathematical definition, solutions, relation with other decomposition methods, and applications.\\
+    	Main discussion:
+    	\begin{enumerate}[1)]
+    		\item Compared with TT, the main advantages of tensor ring decompositions is the the TR ranks is more small and balanced.
+    		\item Due to the trace operation in the TR model, circular dimensional permutation invariance lends to convenience of calculations. It is clever ideas to use trace operation.
+    		\item	Algorithm: author use t-svd and ALS to solve the optimization problem respectively.
+    		\item	 Author proposes systematic introduction of mathematical operations based TR representation and suggests that TR decomposition is the generalization of other popular decomposition methods, like CPD, Tucker decomposition, TT etc.
+    		\item	In experiment part, we discussed many detailed problem, include how to use the features for classification, how to make the SNR fixed.
+    	\end{enumerate}
+    
+   	
+    		
+
+\end{document}
